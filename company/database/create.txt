@@ -1,0 +1,14 @@
+CREATE TABLE `companya` (
+  `account` varchar(45) NOT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `address` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `companyb` (
+  `account` varchar(45) NOT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `address` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

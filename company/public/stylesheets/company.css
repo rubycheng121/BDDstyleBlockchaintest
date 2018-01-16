@@ -1,0 +1,9 @@
+strong {
+    font-size: 3rem;
+    color: red;
+}
+
+.box {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}

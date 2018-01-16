@@ -1,0 +1,28 @@
+{
+  "name": "testweb",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "testrpc": "testrpc -p 8545 -a 100 -l 88888888"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "chai": "^4.0.2",
+    "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
+    "crypto-js": "^3.1.9-1",
+    "cucumber": "^2.2.0",
+    "express": "~4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.3",
+    "mocha": "^3.4.1",
+    "moment": "^2.18.1",
+    "morgan": "^1.8.1",
+    "mysql": "^2.13.0",
+    "solc": "^0.4.11",
+    "string-format": "^0.5.0",
+    "sweetalert2": "^6.9.1",
+    "web3": "^1.0.0-beta.18"
+  }
+}

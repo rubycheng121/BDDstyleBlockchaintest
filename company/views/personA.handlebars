@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="companyA">A 公司</a>
+
+        <div class="collapse navbar-collapse justify-content-end">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="personA">
+                    <p id="A_ID">{{A_ID}}</p>
+                </a>
+                <a class="nav-item nav-link" href="companyA">首頁
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link" href="signoutA">登出</a>
+                <a class="nav-item nav-link" href="personA">個人頁面</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <h1>{{A_ID}}</h1>
+    </div>
+    <hr>
+    <div class="row">
+        <p>您的A公司點數餘額：
+            <span id="pointsA">{{AA_points}}</span>
+        </p>
+    </div>
+    <div class="row">
+        <p>您的B公司點數餘額：
+            <span id="pointsB">{{AB_points}}</span>
+        </p>
+    </div>
+    <div class="row">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#transView">交換點數</button>
+        &nbsp
+        <button class="btn btn-primary" id="add">增加100點</button>
+    </div>
+</div>
+
+<div class="modal fade" id="transView" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">交換點數</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="transTarget" class="control-label">交換對象(B公司帳號):</label>
+                        <input type="text" class="form-control" id="transTarget"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="transPoint" class="control-label">交換多少A公司點數:</label>
+                        <input type="number" class="form-control" id="transPoint"></input>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="transfer">交換</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#section 'script'}}
+<script src="javascripts/personA.js"></script> {{/section}}

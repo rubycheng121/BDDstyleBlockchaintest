@@ -1,0 +1,116 @@
+{{#section 'css'}}
+<link rel="stylesheet" href="/stylesheets/company.css"> {{/section}}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="companyA">A 公司</a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link in" href="personA" style="display:none;">
+                    <p id="A_ID">{{A_ID}}</p>
+                </a>
+                <a class="nav-item nav-link" href="companyA">首頁
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link out" href="#login" data-toggle="modal" data-target="#login">登入</a>
+                <a class="nav-item nav-link in" href="signoutA" style="display:none;">登出</a>
+                <a class="nav-item nav-link in" href="personA" style="display:none;">個人頁面</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<br>
+
+<div class="container">
+    <div class="row bg-warning text-gray-dark">
+        <h class="p-5">Welcome to Company A !</h>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 pt-5" style="text-align:center;">
+            <h3>紅利點數交換</h3>
+            <hr>
+            <div class="bg-light text-gray-dark box">
+                <div>
+                    Company A每 <strong>2點紅利點數</strong> 可兌換<br>
+                    Company B紅利 <strong>1</strong> 點
+                </div>
+            </div>
+        </div>
+        <div class="col-4 pt-5" style="text-align:center;">
+            <h3>人氣禮品</h3>
+            <hr>家樂福500元即享券
+            <br>紅利點數： 8,300 點
+            <hr>史奴比便當袋
+            <br>紅利點數： 5,400 點
+            <hr>「美力台灣3D」電影交換券二張
+            <br>紅利點數： 5,000 點
+        </div>
+    </div>
+</div>
+
+<!-- login -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">登入</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="in_account" class="col-sm-2 col-form-label">帳號:</label>
+                        <input type="text" class="col-sm-8 form-control" id="in_account">
+                    </div>
+                    <div class="form-group row">
+                        <label for="in_password" class="col-sm-2 col-form-label">密碼:</label>
+                        <input type="password" class="col-sm-8 form-control" id="in_password"></input>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#signup">註冊</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="sign_in">登入</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- signup -->
+<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">註冊</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="up_account" class="col-sm-2 col-form-label">帳號:</label>
+                        <input type="text" class="col-sm-8 form-control" id="up_account">
+                    </div>
+                    <div class="form-group row">
+                        <label for="up_password" class="col-sm-2 col-form-label">密碼:</label>
+                        <input type="password" class="col-sm-8 form-control" id="up_password"></input>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="sign_up">註冊</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#section 'script'}}
+<script src="javascripts/companyA.js"></script> {{/section}}

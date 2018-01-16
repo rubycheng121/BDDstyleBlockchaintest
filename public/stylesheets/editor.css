@@ -1,0 +1,49 @@
+/*
+ * tool-bar
+ */
+
+#tool-bar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#tool-bar #full {
+    margin-left: 1rem;
+}
+
+#tool-bar button {
+    height: 100%;
+}
+
+/*
+ * Main
+ */
+
+.tab-pane div,
+.tab-pane pre {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    height: 100%;
+}
+
+.small div{
+    height: calc(100vh - 150px);
+}
+
+.big div{
+    height: calc(100vh - 50px);
+}
+
+.fill {
+    padding: 0;
+}
+
+#mochaOutput {
+    background-color: black;
+}

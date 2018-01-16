@@ -1,0 +1,93 @@
+/*
+ * body
+ */
+
+body {
+    background-color: #EAEDF2;
+}
+
+
+/*
+ * tool-bar
+ */
+
+#tool-bar {
+    background-color: beige;
+    font-size: 1.7rem;
+}
+
+
+/*
+ * Main
+ */
+
+#main {
+    display: flex;
+}
+
+#main>div {
+    padding: 20px;
+}
+
+
+/*
+ * Tab
+ */
+
+.tab-pane {
+    flex: initial;
+    width: 40vw;
+    min-width: 400px;
+}
+
+.tab-header {
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 0 1rem 0;
+    width: 100%;
+    background-color: #323A45;
+    text-align: center;
+}
+
+.tab-body {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.tab-body label {
+    font-size: 1.7rem;
+    color: gray;
+    margin-top: 2rem;
+}
+
+.tab-body input {
+    padding-left: 1rem;
+    margin-top: 1px;
+    width: 100%;
+    height: 3rem;
+    border: 2px solid gray;
+    background-color: white;
+}
+
+.tab-body button {
+    margin-top: 1rem;
+    font-size: 2rem;
+    background-color: #01AFD1;
+    text-align: center;
+    color: white;
+    width: 8rem;
+    height: 4rem;
+    border: blue none;
+}
+
+
+/*
+ * con
+ */
+
+#con {
+    flex: 1;
+}

@@ -1,0 +1,112 @@
+{{#section 'css'}}
+<link rel="stylesheet" href="/stylesheets/index.css">{{/section}}
+
+<section id="tool-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="active">
+                        <a href="#sign_in-tab" data-toggle="tab">sign in</a>
+                    </li>
+                    <li>
+                        <a href="#sign_up-tab" data-toggle="tab">Create An Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="main">
+
+    <div class="tab-content">
+        <!--sign in-->
+        <div class="tab-pane active" id="sign_in-tab">
+            <div class="tab-header">
+                SIGN IN
+            </div>
+            <div class="tab-body">
+                <form id="sign_in-form">
+                    <label for="ID">Username:</label>
+                    <br>
+                    <input type="text" name="ID" id="sign_in_ID">
+                    <br>
+                    <label for="password">Password:</label>
+                    <br>
+                    <input type="password" name="password" id="sign_in_password">
+                    <br>
+                    <br>
+                </form>
+                <button id="sign_in-button">Sign in</button>
+            </div>
+        </div>
+        <!--sign up-->
+        <div class="tab-pane" id="sign_up-tab">
+            <div id="sign_up">
+                <div class="tab-header">
+                    SIGN UP
+                </div>
+                <div class="tab-body">
+                    <form id="sign_up-form">
+                        <label for="ID">Username:</label>
+                        <br>
+                        <input type="text" name="ID" id="sign_up_ID">
+                        <br>
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="text" name="email" id="sign_up_email">
+                        <br>
+                        <label for="password">Password:</label>
+                        <br>
+                        <input type="password" name="password" id="sign_up_password">
+                        <br>
+                        <label for="re_password">Re Password:</label>
+                        <br>
+                        <input type="password" name="re_password" id="sign_up_re_password">
+                        <br>
+                        <br>
+                    </form>
+                    <button id="sign_up-button">Sign up</button>
+                </div>
+            </div>
+        </div>
+        <!--reset password
+        <div class="tab-pane" id="reset-tab">
+            <div id="reset">
+                <div class="tab-header">
+                    RESET PASSWORD
+                </div>
+                <div class="tab-body">
+                    <form id="reset-form">
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="text" name="email" id="sign_up_email">
+                        <br>
+                        <br>
+                    </form>
+                    <button id="reset-button">重設密碼</button>
+                </div>
+            </div>
+        </div>
+        -->
+    </div>
+
+    <div id="con">
+        <b>Welcome to the website for A Service Platform for</b>
+        <br>
+        <h2>BDD-style Smart Contract Integration Test Systems</h2>
+        <br>
+        <br>To begin, log in with your user ID and password.
+        <!--
+        <br>
+        <br>If you are unsure about whether or not you have an account,
+        <br> or have forgotten your password, go to the
+        <a href="#reset-tab" data-toggle="tab">Reset Password</a> screen.
+        -->
+    </div>
+
+</section>
+
+{{#section 'script'}}
+<script src="/javascripts/index.js"></script> {{/section}}

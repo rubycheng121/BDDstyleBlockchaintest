@@ -1,0 +1,123 @@
+{{#section 'css'}}
+<link rel="stylesheet" href="/stylesheets/project.css">
+<link rel="stylesheet" href="/stylesheets/helptip.css">{{/section}}
+
+<section id="tool-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills" role="tablist">
+                    <li>
+                        <a>{{ID}}</a>
+                    </li>
+                    <li class="active">
+                        <a href="#project-tab" data-toggle="tab">新增專案</a>
+                    </li>
+                    <li>
+                        <a href="#personal-tab" data-toggle="tab">會員管理</a>
+                    </li>
+                    <li>
+                        <a href="/users/sign_out">sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="main">
+    <div class="flex_box">
+
+        <div class="tab-content">
+            <!--專案管理-->
+            <div class="tab-pane active" id="project-tab">
+                <div class="teb-header">
+                    Create a new project
+                </div>
+                <div class="teb-body">
+                    <div class="form-inline">
+                        <!--專案名稱-->
+                        <div class="inline_input">
+                            <label for="project_name">Project Name : </label>
+                            <input type="text" id="project_name">
+                        </div>
+                        <hr>
+                        <!--合約-->
+                    </div>
+                    <hr>
+                    <button id="new_project-button">Create</button>
+                    <button id="add_contract-button">Add more contracts</button>
+                </div>
+                <p>提示：</p>
+                <p>Contract Class Name 是智能合約撰寫時的名稱</p>
+                <p>Contract Instance ID 是智能合約部署後的名稱</p>
+            </div>
+            <!--個人頁面-->
+            <div class="tab-pane" id="personal-tab">
+                <div class="teb-header">
+                    header
+                </div>
+                <div class="teb-body">
+                    <!--專案名稱-->
+                    <div class="inline_input">
+                        <label>帳號 : </label>
+                        <input readonly value="{{ID}}">
+                    </div>
+                    <div class="inline_input">
+                        <label>信箱 : </label>
+                        <input readonly value="{{email}}">
+                    </div>
+                    <div class="inline_input">
+                        <label>舊密碼 : </label>
+                        <input id="old_password" type="password">
+                    </div>
+                    <div class="inline_input">
+                        <label>新密碼 : </label>
+                        <input id="new_password1" type="password">
+                    </div>
+                    <div class="inline_input">
+                        <label>重新輸入新密碼 : </label>
+                        <input id="new_password2" type="password">
+                    </div>
+                    <br>
+                    <button id="update_password">重設密碼</button>
+
+                    <div class="inline_input">
+                        <label>api key : </label>
+                        <input readonly id="api_key" value="{{api_key}}">
+                    </div>
+                    <br>
+                    <button id="re_api_key">重新產生api key</button>
+                </div>
+            </div>
+        </div>
+        <!--右專案列表-->
+        <div id="project_list" class="flex_item">
+        </div>
+    </div>
+</section>
+
+
+<!-- template -->
+<div id="contract-template" class="template">
+    <div>
+        <div class="inline_input">
+            <label>Contract Class Name:</label>
+            <input type="text" class="contract_name" style="width:auto;">
+            <a href="javascript: void(0)" onclick="remove(this, 1)" style="font-size:25px">&#10006;</a>
+        </div>
+        <button style="margin-top:1rem; margin-botton:1rem;" class="new_deploy" onClick="new_deploy(this)">Add another contract instance</button>
+    </div>
+</div>
+</div>
+
+<div id="instance-template" class="template">
+    <div class="inline_input row" style="margin-top: 1rem;">
+        <label style="margin-left:4rem;">Contract Instance ID:</label>
+        <input type="text" class="instance_name" style="width:auto;">
+        <a href="javascript: void(0)" onclick="remove(this, 2)" style="font-size:25px">&#10006;</a>
+    </div>
+</div>
+
+{{#section 'script'}}
+<script src="/javascripts/project.js"></script> {{/section}}

@@ -1,0 +1,130 @@
+{{#section 'css'}}
+<link rel="stylesheet" href="/stylesheets/editor.css">
+<link rel="stylesheet" href="/stylesheets/helptip.css"> {{/section}}
+
+<!-- htool-bareader -->
+<section id="tool-bar">
+    <h4 id="contract_name" style="display:none">{{contract}}</h4>
+    <input id="step" style="display:none" value="{{step}}">
+
+    <div id="teb">
+        <ul class="nav nav-pills" role="tablist">
+            <li class="active" ondragenter="dragEnter(event,'feature')">
+                <a id="go-feature-tab" href="#feature-tab" data-toggle="tab">
+                    <span id="feature-span" class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;A : Feature
+                </a>
+            </li>
+            <li ondragenter="dragEnter(event,'step-definitions')">
+                <a id="go-step-definitions-tab" href="#step-definitions-tab" data-toggle="tab">
+                    <span id="step_definitions-span" class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;B : Step Definitions
+                </a>
+            </li>
+            <li ondragenter="dragEnter(event,'mocha')">
+                <a id="go-mocha-tab" href="#mocha-tab" data-toggle="tab">
+                    <span id="unit_test-span" class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;C : Unit Test
+                </a>
+            </li>
+            <li ondragenter="dragEnter(event,'solidity')">
+                <a id="go-solidity-tab" href="#solidity-tab" data-toggle="tab">
+                    <span id="contract-span" class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;D : Contract
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="help-tip" style="right:-10%;">
+        <p>Step1:完成Feature
+            <br> Step2:填寫Step Definitions
+            <br> Step3:填寫Unit Test
+            <br> Step4:完成Contract
+            <br> Step5:完成Unit Test
+            <br> Step6:完成Step Definitions
+        </p>
+    </div>
+    <div id="buttom">
+        <button type="buttom" class="btn btn-default" id="run-feature">
+            <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>Run Feature
+        </button>
+        <button type="buttom" class="btn btn-default" id="run-mocha">
+            <span class="glyphicon" aria-hidden="true"></span>Run Mocha
+        </button>
+        <button type="buttom" class="btn btn-default" id="compile">
+            <span class="glyphicon" aria-hidden="true"></span>Compile
+        </button>
+
+        <button id="full" type="buttom" class="btn btn-info" aria-label="left Align">
+            <span class="glyphicon glyphicon-resize-full" aria-hidden="true">
+        </button>
+
+        <button id="upload" type="buttom" class="btn btn-info" aria-label="left Align">
+            <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true">upload
+        </button>
+        <!--
+        <button type="buttom" class="btn btn-info" aria-label="left Align">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true">setting
+        </button>
+        -->
+    </div>
+</section>
+
+<section id="main">
+    <div class="tab-content">
+
+        <!-- feature -->
+        <div class="tab-pane small active" id="feature-tab">
+            <div id="feature" ondragover="dragoverHandler(event)" ondrop="dropHandler(event,'feature')">{{feature}}</div>
+        </div>
+
+        <!-- step-definitions -->
+        <div class="tab-pane small" id="step-definitions-tab">
+            <div class="col-md-7">
+                <div id="step-definitions" ondragover="dragoverHandler(event)" ondrop="dropHandler(event,'step-definitions')">{{stepDefinitions}}</div>
+            </div>
+            <div class="col-md-5">
+                <pre id="output"></pre>
+            </div>
+        </div>
+
+        <!-- mocha -->
+        <div class="tab-pane small" id="mocha-tab">
+            <div class="col-md-7">
+                <div id="mocha" ondragover="dragoverHandler(event)" ondrop="dropHandler(event,'mocha')">{{mocha}}</div>
+            </div>
+            <div class="col-md-5">
+                <pre id="mochaOutput"></pre>
+            </div>
+        </div>
+
+        <!-- solidity -->
+        <div class="tab-pane small" id="solidity-tab">
+            <div class="col-md-7">
+                <div id="solidity" ondragover="dragoverHandler(event)" ondrop="dropHandler(event,'solidity')">{{solidity}}</div>
+            </div>
+            <div class="col-md-5">
+                <pre id="solidityOutput"></pre>
+            </div>
+        </div>
+        <!-- auxiliary code -->
+        <div class="tab-pane small" id="auxiliaryCode-tab">
+            <div class="col-md-7">
+                <div id="auxiliaryCode" ondragover="dragoverHandler(event)" ondrop="dropHandler(event,'auxiliaryCode')"></div>
+            </div>
+            <div class="col-md-5">
+                <pre id="auxiliaryCodeOutput">說明文件</pre>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{{#section 'script'}}
+<script src="/javascripts/string-format.js"></script>
+<script type="text/javascript">
+    var module = {};
+</script>
+<script type="text/javascript" src="/ansi-html/index.js"></script>
+<script type="text/javascript">
+    var ansiHTML = module.exports;
+    module = null;
+</script>
+<script src="/javascripts/editor_ace.js"></script>
+<script src="/javascripts/editor.js"></script> {{/section}}
